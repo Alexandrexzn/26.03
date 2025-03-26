@@ -1,0 +1,74 @@
+/*estilo geral*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    
+    padding: 20px;
+}
+
+ 
+h2 {
+    color: #ff4500; /* adiciona a cor para o texto*/
+    border-bottom: 3px solid #ff4500; /* coloca uma linha de 3 pixels de altura do texto de uma cor que eu escolher */
+    display: inline-block; /* se comporta como um elemento de bloco */
+    padding-bottom: 5px; /* adiciona um espaço de 5 pixels do texto*/
+    font-size: 20px;
+}
+
+/*conteiner no centro*/
+.container {
+    max-width: 900px;   /*define a largura maxima do contener*/
+    margin: auto;       /*centraliza o conteiner*/
+    padding: 20px;      /*espaçamento de 20 pixels*/
+}
+
+/*estilo de imagem*/
+.character {
+    display: flex; /*permite alinhamento e distribuição */
+    flex-direction: column; /* organiza os itens na vertical*/
+    align-items: center; /* alinha itens filho*/
+    background: rgba(255, 68, 0, 0); /*fundo*/
+    padding: 15px; /* espaço interno de 15 pixels*/
+    border-radius: 10px; /* faz a borda ficam aredondado em 10 pixels de raio */
+    margin-bottom: 20px; /* espaço de 20 pixels*/
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s; /* define uma animação suave de 0.3 segundos */
+}
+
+.character:hover {
+    transform: scale(1.05); /* quando passar o mouse aumenta o tamanho em 5% */
+    box-shadow: 0px 4px 12px rgba(255, 69, 0, 0.8); /* sombra */
+}
+
+.character img {
+    max-width: 80%; /* define que a image  ocupe no maximo 80 % da largura do conterner */ 
+    height: auto; /* faz que a altura se ajuste sozinha */
+    border-radius: 10px; /* as bordas fiquem arredondadas */
+    margin-top: 10px; /* espaço de 10 pixels acima da  imagem */
+}
+
+/*lista que eu personalizei*/
+.character-list {
+    list-style: none; /* remove os marcadores */
+    padding: 0; /* remove o espaçamento interno das linhas */
+}
+
+.character-list li {
+    font-size: 18px; /* define o tamanho da fonte como 18 pixels de cada linha */
+    margin: 10px 0; /* espaçamento de 10 pixels acima e abaixo das linhas */
+    color: #ffcc00; /* cor do texto */
+}
+
+/*capacidade do código */
+@media (max-width: 600px) { /* aplica estilos diferentes quando a largura for menor que 600px */
+    .container { /* diminui o padding para 10 px em telas pequenas */
+        padding: 10px; 
+    }
+    
+    .character img { /* faz as imagem ocupem 100% de largura */
+        max-width: 100%;
+    }
+}
